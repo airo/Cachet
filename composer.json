@@ -105,13 +105,23 @@
         },
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+	        "secure-http" : false
     },
     "extra": {
         "branch-alias": {
             "dev-master": "2.4-dev"
         }
     },
+    "repositories": [
+               {
+            "type": "composer",
+            "url": "https://art.rambler.ru/api/composer/adtech_composer_remote"
+        },
+        {
+            "packagist": false
+        }
+	],
     "minimum-stability": "dev",
     "prefer-stable": true
 }

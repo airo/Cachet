@@ -76,6 +76,7 @@ class Releases implements ReleasesContract
      */
     public function latest()
     {
+	/*
         $release = $this->cache->remember('release.latest', 720, function () {
             $headers = ['Accept' => 'application/vnd.github.v3+json', 'User-Agent' => defined('CACHET_VERSION') ? 'cachet/'.constant('CACHET_VERSION') : 'cachet'];
 
@@ -89,7 +90,11 @@ class Releases implements ReleasesContract
                 'headers' => $headers,
             ])->getBody(), true);
         });
+	*/
 
+	$release['tag_name'] = 'v2.3.15';
+	$release['prerelease'] = false;
+	$release['draft'] = false;
         return [
             'tag_name' => $release['tag_name'],
             'prelease' => $release['prerelease'],
