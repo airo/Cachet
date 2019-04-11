@@ -45,7 +45,7 @@ return [
         ],
         'update' => [
             'mail' => [
-                'subject' => 'Incident Updated',
+                'subject' => 'Обновление по инциденту',
                 'content' => ':name was updated',
                 'title'   => ':name was updated to :new_status',
                 'action'  => 'View',
